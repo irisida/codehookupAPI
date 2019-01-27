@@ -32,3 +32,10 @@ namespace matcher.API.Data
     }
 }
 ```
+
+### Setting up a conectionString
+
+To setup a connection string (for a trivial SQLite DB) we can add to the appsettings.json file and provide a ConnectionStrings block. This will point to a data source directly in an Sqlite setting. To enable and use the new connection string we must amend the startup.cs services to use the injected Configuration and with the GetConnectionString pass in our newly created DefaultConnection string.
+```
+services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+```
