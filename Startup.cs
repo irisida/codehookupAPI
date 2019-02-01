@@ -37,10 +37,7 @@ namespace matcher.API
                 c.SwaggerDoc("v1", new Info
                 {
                     Version = "v1",
-                    Title = "Matcher Api",
-                    Description = "Asp.Net APi",
-                    TermsOfService = "None",
-                    Contact = new Contact() { Name = "Ed Leonard", Email = "edward.leonard@gmail.com", Url = "" }
+                    Title = "Matcher Api"
                 });
             });
         }
