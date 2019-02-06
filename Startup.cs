@@ -52,7 +52,7 @@ namespace matcher.API
         c.SwaggerDoc("v1", new Info
         {
           Version = "v1",
-          Title = "NerdHerd Api"
+          Title = "hookup Api"
         });
       });
     }
@@ -79,7 +79,7 @@ namespace matcher.API
       app.UseSwagger();
       app.UseSwaggerUI(c =>
       {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nerdherd Api");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "hookup Api");
       });
     }
   }
