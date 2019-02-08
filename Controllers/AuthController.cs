@@ -49,8 +49,6 @@ namespace matcher.API.Controllers
     [HttpPost("login")]
     public async Task<IActionResult> Login(UserForLoginDTO userForLoginDTO)
     {
-      throw new Exception("computer says no");
-
       // checks username and password matches against stored
       var userFromRepo = await _repo.Login(userForLoginDTO.Username.ToLower(), userForLoginDTO.Password);
 
