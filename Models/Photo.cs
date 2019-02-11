@@ -1,6 +1,6 @@
 using System;
 
-namespace matcher.API.Models
+namespace hookup.API.Models
 {
   public class Photo
   {

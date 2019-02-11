@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using matcher.API.Models;
+using hookup.API.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace matcher.API.Data
+namespace hookup.API.Data
 {
     public class AuthRepository : IAuthRepository
     {

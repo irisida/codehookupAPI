@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using hookup.API.Helpers;
-using matcher.API.Data;
+using hookup.API.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -21,7 +21,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace matcher.API
+namespace hookup.API
 {
   public class Startup
   {
@@ -39,6 +39,7 @@ namespace matcher.API
       services.AddCors();
       services.AddTransient<Seed>();
       services.AddScoped<IAuthRepository, AuthRepository>();
+      services.AddScoped<IHookupRepository, HookupRepository>();
       services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
       services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
       {

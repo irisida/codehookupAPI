@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace matcher.API.Models
+namespace hookup.API.Models
 {
   public class User
   {

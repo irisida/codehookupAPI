@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "matcher.API": {
+    "hookup.API": {
       "commandName": "Project",
       "launchBrowser": false,
       "launchUrl": "api/values",
