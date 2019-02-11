@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace matcher.API.DTOs
+namespace hookup.API.DTOs
 {
     public class UserForRegisterDTO
     {

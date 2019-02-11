@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using matcher.API.Data;
+using hookup.API.Data;
 
-namespace matcher.API.Migrations
+namespace hookup.API.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20190127180352_InitialCreate")]
@@ -17,7 +17,7 @@ namespace matcher.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.1-servicing-10028");
 
-            modelBuilder.Entity("matcher.API.Models.Value", b =>
+            modelBuilder.Entity("hookup.API.Models.Value", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();

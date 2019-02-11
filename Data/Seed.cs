@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using matcher.API.Models;
+using hookup.API.Models;
 using Newtonsoft.Json;
 
-namespace matcher.API.Data
+namespace hookup.API.Data
 {
   public class Seed
   {

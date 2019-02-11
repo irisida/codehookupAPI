@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using matcher.API.Models;
+using hookup.API.Models;
 
-namespace matcher.API.Data
+namespace hookup.API.Data
 {
     public interface IAuthRepository
     {

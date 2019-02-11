@@ -1,4 +1,4 @@
-namespace matcher.API.DTOs
+namespace hookup.API.DTOs
 {
     public class UserForLoginDTO
     {

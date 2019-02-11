@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using matcher.API.Data;
+using hookup.API.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace matcher.API.Controllers
+namespace hookup.API.Controllers
 {
     /**
      * default action here is where the [controller] assumes the

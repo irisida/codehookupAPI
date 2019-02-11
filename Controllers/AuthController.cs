@@ -3,14 +3,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using matcher.API.Data;
-using matcher.API.DTOs;
-using matcher.API.Models;
+using hookup.API.Data;
+using hookup.API.DTOs;
+using hookup.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace matcher.API.Controllers
+namespace hookup.API.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]

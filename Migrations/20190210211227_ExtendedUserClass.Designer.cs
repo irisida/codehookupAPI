@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using matcher.API.Data;
+using hookup.API.Data;
 
-namespace matcher.API.Migrations
+namespace hookup.API.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20190210211227_ExtendedUserClass")]
@@ -18,7 +18,7 @@ namespace matcher.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.2.1-servicing-10028");
 
-            modelBuilder.Entity("matcher.API.Models.Photo", b =>
+            modelBuilder.Entity("hookup.API.Models.Photo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -40,7 +40,7 @@ namespace matcher.API.Migrations
                     b.ToTable("Photos");
                 });
 
-            modelBuilder.Entity("matcher.API.Models.User", b =>
+            modelBuilder.Entity("hookup.API.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -74,7 +74,7 @@ namespace matcher.API.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("matcher.API.Models.Value", b =>
+            modelBuilder.Entity("hookup.API.Models.Value", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -86,9 +86,9 @@ namespace matcher.API.Migrations
                     b.ToTable("Values");
                 });
 
-            modelBuilder.Entity("matcher.API.Models.Photo", b =>
+            modelBuilder.Entity("hookup.API.Models.Photo", b =>
                 {
-                    b.HasOne("matcher.API.Models.User", "User")
+                    b.HasOne("hookup.API.Models.User", "User")
                         .WithMany("Photos")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
