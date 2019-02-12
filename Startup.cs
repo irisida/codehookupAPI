@@ -20,6 +20,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
+using AutoMapper;
 
 namespace hookup.API
 {
@@ -35,8 +36,12 @@ namespace hookup.API
     // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+      services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddJsonOptions(opt =>
+      {
+        opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+      });
       services.AddCors();
+      services.AddAutoMapper();
       services.AddTransient<Seed>();
       services.AddScoped<IAuthRepository, AuthRepository>();
       services.AddScoped<IHookupRepository, HookupRepository>();
@@ -96,7 +101,7 @@ namespace hookup.API
       }
 
       //app.UseHttpsRedirection();
-      // seeder.SeedUsers();
+      //seeder.SeedUsers();
       app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
       app.UseAuthentication();
       app.UseMvc();
