@@ -27,10 +27,10 @@ namespace hookup.API.Helpers
         {
           opt.MapFrom(src => src.Photos.FirstOrDefault(p => p.IsAvatar).Url);
         })
-        .ForMember(dest => dest.Age, opt =>
-        {
-          opt.MapFrom(d => d.DateOfBirth.CalculateAge());
-        });
+      .ForMember(dest => dest.Age, opt =>
+      {
+        opt.MapFrom(d => d.DateOfBirth.CalculateAge());
+      });
       CreateMap<User, UserForDetailedDTO>()
       .ForMember(dest => dest.PhotoUrl, opt =>
         {
